@@ -1,0 +1,103 @@
+<html>
+<!-- 參考網址：https://my.oschina.net/Tsybius2014/blog/613176 -->
+
+<head>
+    <title> 21點遊戲 (black jack)</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=gb2312" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<style type="text/css">
+    table th {
+        text-align: center;
+        text-decoration: none;
+        font-weight: normal;
+        padding: 3px 6px 3px 6px;
+        width: 200px;
+    }
+    
+    table td {
+        vertical-align: center;
+        text-align: center;
+        padding: 3px 6px 3px 6px;
+        margin: 0px;
+    }
+    
+    img {
+        width: 100px;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <table width="100%">
+            <tr>
+                <td>
+                    <div class="mt-3" align="left">
+                        <h1>21點遊戲 (Black Jack)</h1>
+                    </div>
+                </td>
+                <td>
+                    <div align="right">
+                        <audio width="300" height="10" controls autoplay="true" loop="true">
+                            <source src="bgm.ogg" type="video/ogg" />
+                        </audio>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <hr>
+        <table id="tableboard">
+            <tr>
+                <td id="player1"><img src="resource\BaldBrother.jpg" /></td>
+                <td />
+                <td />
+                <td />
+                <td />
+                <td />
+                <td />
+                <td />
+                <td />
+                <td />
+                <td />
+                <td />
+                <td />
+                <td />
+            </tr>
+            <tr>
+                <td id="player2"><img src="resource\player.png" /></td>
+                <td />
+                <td />
+                <td />
+                <td />
+                <td />
+                <td />
+                <td />
+                <td />
+                <td />
+                <td />
+                <td />
+                <td />
+                <td />
+            </tr>
+        </table>
+        <hr>
+        <table>
+            <tr>
+                <td>
+                    <div id="score"></div>
+                </td>
+                <td>
+                    <div id="bulletin">請做出選擇 (Please make a choice.)</div>
+                </td>
+            </tr>
+        </table>
+        <hr>
+        <input type="button" class="btn btn-outline-success ml-2 my-sm-0" id="hit" value="加一張牌 (HIT)" onclick="hit();" />
+        <input type="button" class="btn btn-outline-danger ml-2 my-sm-0" id="stand" value="我不要了 (STAND)" onclick="stand();" />
+        <!--<input type="button" id="restart" value="再玩一局 (FIGHT AGAIN)" onclick="location.reload();" />-->
+        <input type="button" class="btn btn-outline-info ml-2 my-sm-0" id="restart" value="再玩一局 (FIGHT AGAIN)" onclick="restart();" />
+        <script src="black_jack.js"></script>
+    </div>
+</body>
+
+</html>
